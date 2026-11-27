@@ -29,7 +29,7 @@ static BOOL DYUpdateBlockShouldBlockForcePopup(id context) {
     if (!context || ![context respondsToSelector:@selector(eventID)]) {
         return NO;
     }
-    NSString *eventID = [context eventID];
+    NSString *eventID = ((id (*)(id, SEL))objc_msgSend)(context, @selector(eventID));
     if (!eventID) {
         return NO;
     }
@@ -37,7 +37,7 @@ static BOOL DYUpdateBlockShouldBlockForcePopup(id context) {
     if (!eventClass || ![eventClass respondsToSelector:@selector(eventID)]) {
         return NO;
     }
-    NSString *targetID = [eventClass eventID];
+    NSString *targetID = ((id (*)(id, SEL))objc_msgSend)(eventClass, @selector(eventID));
     return targetID && [eventID isEqualToString:targetID];
 }
 
