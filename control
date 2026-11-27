@@ -1,0 +1,10 @@
+Package: com.doimty.dyupdateblock
+Name: DYUpdateBlock
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: 屏蔽抖音启动强制更新弹窗（默认生效）
+Section: Tweaks
+Depends: firmware (>= 14.0), mobilesubstrate
+Maintainer: doimty
+Author: doimty
+Priority: optional
