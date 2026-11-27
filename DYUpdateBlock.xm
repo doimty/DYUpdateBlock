@@ -23,6 +23,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
+#import <objc/message.h>
 
 // Path 4 用：只拦版本更新强制弹窗，其他强制弹窗放行；任何环节缺失都放行。
 static BOOL DYUpdateBlockShouldBlockForcePopup(id context) {
