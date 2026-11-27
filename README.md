@@ -4,8 +4,7 @@
 
 ## 原理
 
-抖音有 8 条能弹出更新/拦截启动的路径，只拦一条不够（SJJ 的做法只拦
-版本检查那条，所以很多人还看到弹窗）。本插件把 8 条里能用 ObjC hook
+抖音有 8 条能弹出更新/拦截启动的路径，只拦一条不够。本插件把 8 条里能用 ObjC hook
 的全拦了（40.9.0 `AwemeCore` 反汇编验证）：
 
 1. **启动强制更新（AWEMR）**：`+[AWEMRLaunchForceUpdateManager judgeResultWithNeedBlock:reason:]`
